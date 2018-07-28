@@ -13,9 +13,9 @@ class App extends Component {
       <div className="App">
         <SiteHeader />
         <AboutMe />
-        <ImageSection style={{height: 250}} src={images.milkyWay} />
+        <ImageSection style={{height: 200}} src={images.milkyWay} />
         <Projects />
-        <ImageSection style={{height: 250}} src={images.starsPurpleToGreen} />
+        <ImageSection style={{height: 200}} src={images.starsPurpleToGreen} />
         <ContactMe />
       </div>
     );

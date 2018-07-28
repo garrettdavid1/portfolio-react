@@ -12,16 +12,24 @@ body {
   height: 100%;
 }
 
-/* .contentSection{
-  background: linear-gradient(to bottom, #2d004d, #DEDECD);
-} */
-
 .contentSectionHeader{
   margin-left: -100%;
 }
 
 .contentSectionHeader.appear{
   animation: slideInFromLeft .5s forwards;
+}
+
+.headshot{
+  margin-left: -150%;
+}
+
+.headshot.wide.appear{
+  animation: rollInFromLeftWide 3s forwards;
+}
+
+.headshot.tall.appear{
+  animation: rollInFromLeftTall 3s forwards;
 }
 
 @-webkit-keyframes slideInFromLeft {
@@ -32,4 +40,80 @@ body {
 @keyframes slideInFromLeft {
   80% { margin-left: 50px }
   100% { margin-left: 0; }
+}
+
+@-webkit-keyframes rollInFromLeftWide {
+  30% { 
+        margin-left: calc(50% - 7vw - 5px);
+        transform: rotate(380deg); 
+      }
+  50% { 
+        margin-left: calc(50% - 10.5vw - 5px);
+        transform: rotate(357deg);
+      }
+  70% { 
+        margin-left: calc(50% - 9.9vw - 5px);
+        transform: rotate(360.5deg);
+      }  
+  100% {
+        margin-left: calc(50% - 10vw - 5px);
+        transform: rotate(360deg);
+      }
+}
+
+@keyframes rollInFromLeftWide {
+  30% { 
+        margin-left: calc(50% - 7vw - 5px);
+        transform: rotate(380deg); 
+      }
+  50% { 
+        margin-left: calc(50% - 10.5vw - 5px);
+        transform: rotate(357deg);
+      }
+  70% { 
+        margin-left: calc(50% - 9.9vw - 5px);
+        transform: rotate(360.5deg);
+      }  
+  100% {
+        margin-left: calc(50% - 10vw - 5px);
+        transform: rotate(360deg);
+      }
+}
+
+@-webkit-keyframes rollInFromLeftTall {
+  30% { 
+        margin-left: calc(50% - 7vh - 5px);
+        transform: rotate(380deg); 
+      }
+  50% { 
+        margin-left: calc(50% - 10.5vh - 5px);
+        transform: rotate(357deg);
+      }
+  70% { 
+        margin-left: calc(50% - 9.9vh - 5px);
+        transform: rotate(360.5deg);
+      }  
+  100% {
+        margin-left: calc(50% - 10vh - 5px);
+        transform: rotate(360deg);
+      }
+}
+
+@keyframes rollInFromLeftTall {
+  30% { 
+        margin-left: calc(50% - 7vh - 5px);
+        transform: rotate(380deg); 
+      }
+  50% { 
+        margin-left: calc(50% - 10.5vh - 5px);
+        transform: rotate(357deg);
+      }
+  70% { 
+        margin-left: calc(50% - 9.9vh - 5px);
+        transform: rotate(360.5deg);
+      }  
+  100% {
+        margin-left: calc(50% - 10vh - 5px);
+        transform: rotate(360deg);
+      }
 }

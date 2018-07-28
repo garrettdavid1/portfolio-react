@@ -8,32 +8,29 @@ export const styles = {
     centerContainer: {
         width: '65vw',
         height: '50vh',
-        backgroundColor: 'black',
+        backgroundColor: 'transparent',
         display: 'flex',
         flexWrap: 'wrap',
-        borderWidth: 3,
+        borderWidth: 10,
         borderStyle: 'solid',
-        borderColor: 'slategray'
+        borderColor: 'black',
+        overflow: 'hidden'
     },
     headshotContainer:{
-        height: window.innerWidth > 400 ? '100%' : '40%',
-        width: window.innerWidth > 400 ? '40%' : '100%',
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     headshot: {
-        height: '20vw',
-        width: '20vw',
+        borderWidth: 5,
+        borderColor: 'black',
+        borderStyle: 'solid',
         borderRadius: '50%',
-        backgroundColor: 'lightblue',
+        backgroundColor: 'transparent',
         backgroundImage: `url(${images.headshot})`,
         backgroundSize: 'contain',
-        backgroundRepeat: 'no-repeat'
-    }, 
+        backgroundRepeat: 'no-repeat',
+    },
     taglineContainer:{
-        height: window.innerWidth > 400 ? '100%' : '60%',
-        width: window.innerWidth > 400 ? '60%' : '100%',
         display: 'flex',
         flex: 1,
         flexWrap: 'wrap',
@@ -43,6 +40,6 @@ export const styles = {
         width: '100%',
         fontSize: '5vw',
         fontFamily: layout.primaryFont,
-        color: 'lightgray'
+        color: 'white'
     }
 }
