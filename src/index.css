@@ -20,6 +20,27 @@ body {
   animation: slideInFromLeft .5s forwards;
 }
 
+.tab{
+  top: 25vh;
+}
+
+.tab.selected{
+  background-color: whitesmoke !important;
+  color: black !important;
+  height: 79px;
+  top: calc(25vh - 68px);
+}
+
+.tab.unselected{
+  border-bottom-color: whitesmoke;
+  height: 79px;
+  top: calc(25vh - 68px);
+}
+
+.tab.visible{
+  animation: slideUp .6s forwards;
+}
+
 .headshot{
   margin-left: -150%;
 }
@@ -116,4 +137,31 @@ body {
         margin-left: calc(50% - 10vh - 5px);
         transform: rotate(360deg);
       }
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    height: 60px;
+  }
+  80% { 
+    top: calc(25vh - 105px);
+   }
+  100% { 
+    top: calc(25vh - 68px);
+    height: 79px;
+    z-index: 6;
+   }
+}
+
+@keyframes slideUp {
+  0% {
+    height: 60px;
+  }
+  80% { 
+    top: calc(25vh - 105px);
+   }
+  100% { 
+    top: calc(25vh - 68px);
+    height: 79px;
+  }
 }

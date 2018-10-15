@@ -2,29 +2,33 @@ import { layout } from '../../../../constants/Layout';
 
 export const styles = {
     container: {
-        width: '100%',
-        height: 'auto',
+        width: 'calc(65vw - 20px)',
+        // marginRight: 20,
+        // flex: 1,
+        height: '100%',
+        boxSizing: 'border-box',
         padding: '10px',
-        backgroundColor: '#DEDECD',
         display: 'flex',
         flexWrap: 'wrap',
-        flexDirection: 'row',
+        flexDirection: 'column',
         justifyContent: 'flex-start',
         overflowX: 'hidden',
         borderWidth: 0,
         borderTopWidth: 3,
         borderBottomWidth: 3,
         borderStyle: 'solid',
-        borderColor: 'slategray'
+        borderColor: 'whitesmoke',
+        color: 'white'
     },
     title: {
-        width: '200vw',
-        fontSize: '10vw',
+        width: '100%',
+        maxHeight: '33%',
+        fontSize: '5vw',
         fontFamily: layout.primaryFont,
         textAlign: 'left',
-        color: '#DEDECD',
+        color: 'whitesmoke',
         WebkitTextStrokeWidth: '3px',
-        WebkitTextStrokeColor: 'black',
+        WebkitTextStrokeColor: 'whitesmoke',
         textDecorationLine: 'underline',
         textDecorationStyle: 'solid'
     }
