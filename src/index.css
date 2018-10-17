@@ -5,6 +5,7 @@ body {
   padding: 0;
   font-family: sans-serif;
   overflow-x: hidden;
+  cursor: default;
 }
 
 #root{
@@ -51,6 +52,10 @@ body {
 
 .headshot.tall.appear{
   animation: rollInFromLeftTall 3s forwards;
+}
+
+.noTransition{
+  transition: none !important;
 }
 
 @-webkit-keyframes slideInFromLeft {

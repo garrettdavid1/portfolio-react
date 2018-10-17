@@ -39,20 +39,17 @@ export const styles = {
     },
     carousel: {
         width: 'calc((65vw * 4) - 20px)',
-        // flex: 1,
         height: 'calc(50vh - 20px)',
         position: 'fixed',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         boxSizing: 'border-box',
-        transition: 'margin-left .5s linear'
+        transition: 'margin-left .5s linear',
     },
     homeContent: {
         height: '100%',
         width: 'calc(65vw - 20px)',
-        // marginRight: 20,
-        // flex: 1,
         padding: 10,
         display: 'flex',
         flexWrap: 'wrap',

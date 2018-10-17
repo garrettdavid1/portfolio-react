@@ -24,7 +24,7 @@ export default class Tab extends Component{
 					key={title.replace(/\s/g, '')}
                     onClick={this.onSelect}
 				>
-					<h3 style={{color: 'inherit', margin: 0}}>{title}</h3>
+					<h3 style={styles.title}>{title}</h3>
 				</div>
         )
     }

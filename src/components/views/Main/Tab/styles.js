@@ -13,5 +13,9 @@ export const styles = {
         cursor: 'pointer',
         boxSizing: 'border-box',
         color: 'whitesmoke'
+    },
+    title: {
+        color: 'inherit', 
+        margin: 0
     }
 }
