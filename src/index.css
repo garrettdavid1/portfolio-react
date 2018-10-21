@@ -13,13 +13,13 @@ body {
   height: 100%;
 }
 
-.contentSectionHeader{
+/* .contentSectionHeader{
   margin-left: -100%;
 }
 
 .contentSectionHeader.appear{
   animation: slideInFromLeft .5s forwards;
-}
+} */
 
 .tab{
   top: 25vh;

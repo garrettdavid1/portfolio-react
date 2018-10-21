@@ -6,7 +6,7 @@ export default class ContentSection extends Component{
     render(){
         return (
             <div className="contentSection" style={{...styles.container, ...{width: 'calc(65vw - 20px)',}}} {...this.props}>
-                {this.props.title && <OnVis className="contentSectionHeader" onVisible={this.props.onVisible} name={this.props.title} style={styles.title}>{this.props.title}</OnVis>}
+                {this.props.title && <h3 className="contentSectionHeader" style={styles.title}>{this.props.title}</h3>}
                 {this.props.children}
             </div>
         )

@@ -3,16 +3,20 @@ import ContentSection from '../../shared/StyledComponents/ContentSection';
 import { settings } from '../../../constants/Settings';
 import lib from '../../../lib/Lib';
 
-let hasBeenSeen = false;
 export default class Projects extends Component{
     state = {
         text: ''
     }
 
+    hasBeenSeen = false;
+    text = 'Clearly, I haven\'t gotten to this section yet...';
+
     componentWillReceiveProps(nextProps){
-        if(nextProps.visible && !hasBeenSeen){
-            hasBeenSeen = true;
-            setTimeout(() => { lib.typeWriter('Clearly, I haven\'t gotten to this section yet...', this, 'text'); }, settings.carouselTransitionTime);
+        if(nextProps.useTypeWriter && !this.hasBeenSeen && nextProps.visible){
+            this.hasBeenSeen = true;
+            setTimeout(() => { lib.typeWriter(this.text, this, 'text'); }, settings.carouselTransitionTime);
+        } else if(nextProps.visible && !this.hasBeenSeen){
+            this.setState({ text: this.text });
         }
     }
 

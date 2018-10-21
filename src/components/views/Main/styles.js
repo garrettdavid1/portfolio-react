@@ -81,5 +81,10 @@ export const styles = {
         fontFamily: layout.primaryFont,
         color: 'whitesmoke',
         whiteSpace: 'normal'
+    },
+    dismissTypeWriterBtn: {
+        height: 40,
+        position: 'absolute',
+        right: 0
     }
 }

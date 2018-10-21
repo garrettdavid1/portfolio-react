@@ -1,6 +1,7 @@
 import React, {Component } from 'react';
 import { images } from '../../../constants/Images';
 import { settings } from '../../../constants/Settings';
+import { layout } from '../../../constants/Layout';
 import ImageSection from '../../shared/StyledComponents/ImageSection';
 import Tab from './Tab';
 import Mugshot from '../Mugshot';
@@ -9,6 +10,7 @@ import Projects from '../Projects';
 import ContactMe from '../ContactMe';
 import { styles } from './styles';
 
+let useTypeWriter = true;
 export default class Main extends Component{
 	state={
 		selectedTab: 0,
@@ -23,11 +25,12 @@ export default class Main extends Component{
             <div style={styles.centerRow}>
               <div style={styles.centerContainer}>
 			  	<div style={{...styles.carousel, ...{marginLeft: carouselMarginLeft}}} className={carouselShouldTransition ? '' : 'noTransition'}>
-					<Mugshot visible={selectedTab === 0}/>
-					<AboutMe visible={selectedTab === 1}/>
-					<Projects visible={selectedTab === 2}/>
-					<ContactMe visible={selectedTab === 3}/>
+					<Mugshot visible={selectedTab === 0} useTypeWriter={useTypeWriter}/>
+					<AboutMe visible={selectedTab === 1} useTypeWriter={useTypeWriter}/>
+					<Projects visible={selectedTab === 2} useTypeWriter={useTypeWriter}/>
+					<ContactMe visible={selectedTab === 3} useTypeWriter={useTypeWriter}/>
 				</div>
+				{/* <div style={{...layout.button, ...styles.dismissTypeWriterBtn}}>Get rid of this typewriter nonsense...</div> */}
               </div>
               {this.getTabs()}
             </div>

@@ -20,11 +20,19 @@ export default class Tab extends Component{
         return (
             <div 
 					className={classes}
-					style={{...styles.tab, ...{right: rightSpace + (index * -tabWidth) + (tabWidth * 3), width: tabWidth}}}
+					style={{
+                        ...styles.tab, 
+                        ...{
+                            right: rightSpace + (index * -tabWidth) + (tabWidth * 3), 
+                            width: tabWidth, 
+                            borderLeftWidth: this.props.index === 0 ? 10 : 5,
+                            borderRightWidth :this.props.index === 3 ? 10 : 5
+                        }
+                    }}
 					key={title.replace(/\s/g, '')}
                     onClick={this.onSelect}
 				>
-					<h3 style={styles.title}>{title}</h3>
+					<h3 style={{...styles.title, ...{fontSize: window.innerWidth > 700 ? (window.innerWidth * .65) / 48 : 12}}}>{title}</h3>
 				</div>
         )
     }
@@ -62,5 +70,16 @@ export default class Tab extends Component{
         }
 
         this.props.setSelectedTab(this.props.index);
+    }
+
+    getFontSize = () => {
+        const width = window.innerWidth;
+        if(width > 1000){
+            return 30;
+        } else if(width > 700){
+            return 25;
+        } else{
+            return 20;
+        }
     }
 }
