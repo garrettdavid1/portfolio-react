@@ -26,7 +26,8 @@ export const styles = {
     centerContainer: {
         width: '65vw',
         height: '50vh',
-        backgroundColor: 'rgba(0, 0, 0, .8)',
+        // backgroundColor: 'rgba(0, 0, 0, .8)',
+        backgroundColor: 'black',
         display: 'flex',
         flexWrap: 'wrap',
         borderWidth: 10,
@@ -47,44 +48,9 @@ export const styles = {
         boxSizing: 'border-box',
         transition: 'margin-left .5s linear',
     },
-    homeContent: {
-        height: '100%',
-        width: 'calc(65vw - 20px)',
-        padding: 10,
-        display: 'flex',
-        flexWrap: 'wrap',
-        boxSizing: 'border-box'
-    },
-    headshotContainer:{
-        display: 'flex',
-        alignItems: 'center',
-    },
-    headshot: {
-        borderWidth: 1,
-        borderColor: 'whitesmoke',
-        borderStyle: 'solid',
-        borderRadius: '50%',
-        backgroundColor: 'transparent',
-        backgroundImage: `url(${images.headshot})`,
-        backgroundSize: 'contain',
-        backgroundRepeat: 'no-repeat',
-    },
-    taglineContainer:{
-        display: 'flex',
-        flex: 1,
-        flexWrap: 'wrap',
-        justifyContent: 'center'
-    },
-    taglineRow: {
-        width: '100%',
-        fontSize: '5vw',
-        fontFamily: layout.primaryFont,
-        color: 'whitesmoke',
-        whiteSpace: 'normal'
-    },
     dismissTypeWriterBtn: {
-        height: 40,
         position: 'absolute',
-        right: 0
+        right: 0,
+        fontSize: 12
     }
 }

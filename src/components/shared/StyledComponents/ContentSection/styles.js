@@ -20,7 +20,7 @@ export const styles = {
         // borderColor: 'whitesmoke',
         color: 'white'
     },
-    title: {
+    heading: {
         width: '100%',
         maxHeight: '33%',
         margin: 0,

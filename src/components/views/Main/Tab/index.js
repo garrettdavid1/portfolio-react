@@ -5,7 +5,7 @@ export default class Tab extends Component{
 
     state = {
         classes: 'tab',
-        selected: false
+        selected: this.props.index === 0 ? true : false
     }
 
     componentWillReceiveProps(nextProps){
@@ -32,7 +32,16 @@ export default class Tab extends Component{
 					key={title.replace(/\s/g, '')}
                     onClick={this.onSelect}
 				>
-					<h3 style={{...styles.title, ...{fontSize: window.innerWidth > 700 ? (window.innerWidth * .65) / 48 : 12}}}>{title}</h3>
+                    <h3 
+                        style={
+                            {
+                                ...styles.title, 
+                                ...{
+                                    fontSize: window.innerWidth > 700 ? (window.innerWidth * .65) / 48 : window.innerWidth <= 400 ? 10 : 12
+                                    }
+                            }
+                        }
+                    >{title}</h3>
 				</div>
         )
     }
@@ -44,7 +53,7 @@ export default class Tab extends Component{
             }, () => {
                 setTimeout(() => {
                     this.setState({
-                        classes: this.props.index === 0 ? 'tab selected' : 'tab unselected'
+                        classes: this.props.selected ? 'tab visible selected' : 'tab unselected'
                     })
                 }, 600)
             })
@@ -65,7 +74,7 @@ export default class Tab extends Component{
         let {classes} = this.state;
         if(classes.indexOf('unselected') !== -1){
             this.setState({
-                classes: ' tab selected'
+                classes: ' tab visible selected'
             })
         }
 

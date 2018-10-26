@@ -10,6 +10,7 @@ export const layout = {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        fontWeight: 'bolder'
+        fontWeight: 'bolder',
+        cursor: 'pointer'
     }
 }

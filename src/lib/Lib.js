@@ -7,13 +7,15 @@ class Library  {
     }
 
     typeWriter = (text, component, textFieldName, speed = 50, i = 0) => {
-        if (i < text.length) {
-            component.setState({
-                [textFieldName] : component.state[textFieldName] += text.charAt(i)
-            })
-            i++;
-            setTimeout(() => {this.typeWriter(text, component, textFieldName, speed, i)}, speed);
-          }
+        if(component.state.useTypeWriter){
+            if (i < text.length) {
+                component.setState({
+                    [textFieldName] : component.state[textFieldName] += text.charAt(i)
+                })
+                i++;
+                setTimeout(() => {this.typeWriter(text, component, textFieldName, speed, i)}, speed);
+            }
+        }
     }
 }
 

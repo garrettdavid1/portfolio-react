@@ -10,18 +10,19 @@ import Projects from '../Projects';
 import ContactMe from '../ContactMe';
 import { styles } from './styles';
 
-let useTypeWriter = true;
 export default class Main extends Component{
 	state={
 		selectedTab: 0,
 		carouselMarginLeft: 0,
-		carouselShouldTransition: true
+		carouselShouldTransition: true,
+		useTypeWriter: true
 	}
 
     render(){
-		const {selectedTab, carouselMarginLeft, carouselShouldTransition} = this.state;
+		const {selectedTab, carouselMarginLeft, carouselShouldTransition, useTypeWriter} = this.state;
         return <ImageSection style={styles.container} src={images.header}>
             <div style={styles.topContainer} />
+			<div style={{...layout.button, ...styles.dismissTypeWriterBtn, ...{}}} onClick={this.stopTyping}>Stahp the typing...</div>
             <div style={styles.centerRow}>
               <div style={styles.centerContainer}>
 			  	<div style={{...styles.carousel, ...{marginLeft: carouselMarginLeft}}} className={carouselShouldTransition ? '' : 'noTransition'}>
@@ -30,7 +31,6 @@ export default class Main extends Component{
 					<Projects visible={selectedTab === 2} useTypeWriter={useTypeWriter}/>
 					<ContactMe visible={selectedTab === 3} useTypeWriter={useTypeWriter}/>
 				</div>
-				{/* <div style={{...layout.button, ...styles.dismissTypeWriterBtn}}>Get rid of this typewriter nonsense...</div> */}
               </div>
               {this.getTabs()}
             </div>
@@ -71,5 +71,14 @@ export default class Main extends Component{
 			carouselShouldTransition,
 			carouselMarginLeft: selectedTab * (-1 * containerWidth),
 		})
+	}
+
+	stopTyping = () => {
+		console.log('Clicked "stop typing" button')
+		if(this.state.useTypeWriter !== false){
+			this.setState({
+				useTypeWriter: false
+			});
+		}
 	}
 }
