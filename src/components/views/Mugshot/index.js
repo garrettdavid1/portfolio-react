@@ -18,9 +18,6 @@ export default class Mugshot extends Component {
 					<br />
 					Mobile / Web Developer
 					</div>
-					{/* <div style={styles.taglineRow}>
-					Mobile/Web Developer
-					</div> */}
 				</div>
 			</ContentSection>
 		);
