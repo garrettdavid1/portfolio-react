@@ -31,7 +31,6 @@ export const styles = {
     },
     taglineRow: {
         width: '100%',
-        fontSize: '5vw',
         fontFamily: layout.primaryFont,
         color: 'whitesmoke',
         whiteSpace: 'normal'

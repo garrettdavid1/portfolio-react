@@ -9,16 +9,18 @@ export default class Mugshot extends Component {
 		const isWideScreen = window.innerWidth > window.innerHeight;
 		return (
 			<ContentSection style={styles.container}>
-				<div style={{ ...styles.headshotContainer, ...{ height: isLargeScreen ? "100%" : "50%", width: isLargeScreen ? "50%" : "100%" } }}>
+				<div style={{ ...styles.headshotContainer, ...{ height: isLargeScreen ? "100%" : "60%", width: isLargeScreen ? "60%" : "100%" } }}>
 					<OnVis className={this.getHeadshotClasses()} style={{ ...styles.headshot, ...{ height: isWideScreen ? "20vw" : "20vh", width: isWideScreen ? "20vw" : "20vh" } }} />
 				</div>
-				<div style={{ ...styles.taglineContainer, ...{ height: isLargeScreen ? "100%" : "50%", width: isLargeScreen ? "50%" : "100%" } }}>
-					<div style={{ ...styles.taglineRow, ...{ display: "flex", flex: 1, justifyContent: "center", alignItems: "flex-end" } }}>
+				<div style={{ ...styles.taglineContainer, ...{ height: isLargeScreen ? "100%" : "40%", width: isLargeScreen ? "40%" : "100%" } }}>
+					<div style={{ ...styles.taglineRow, ...{ display: "flex", flex: 1, justifyContent: "center", alignItems: "center", fontSize: isLargeScreen ? "4vw" : "5vw" } }}>
 					David Garrett
+					<br />
+					Mobile / Web Developer
 					</div>
-					<div style={styles.taglineRow}>
+					{/* <div style={styles.taglineRow}>
 					Mobile/Web Developer
-					</div>
+					</div> */}
 				</div>
 			</ContentSection>
 		);
