@@ -24,7 +24,7 @@ export default class Projects extends Component{
 
     render(){
         return (
-            <ContentSection heading='Projects'>
+            <ContentSection heading='Projects' visible={this.props.visible}>
                 <div>{this.state.text}</div>
             </ContentSection>
         )

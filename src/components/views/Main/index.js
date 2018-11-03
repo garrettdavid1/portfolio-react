@@ -24,15 +24,19 @@ export default class Main extends Component{
             <div style={styles.topContainer} />
 			<div style={{...layout.button, ...styles.dismissTypeWriterBtn, ...{}}} onClick={this.stopTyping}>Stahp the typing...</div>
             <div style={styles.centerRow}>
-              <div style={styles.centerContainer}>
-			  	<div style={{...styles.carousel, ...{marginLeft: carouselMarginLeft}}} className={carouselShouldTransition ? '' : 'noTransition'}>
+              	<div style={styles.centerContainer}>
 					<Mugshot visible={selectedTab === 0} useTypeWriter={useTypeWriter}/>
 					<AboutMe visible={selectedTab === 1} useTypeWriter={useTypeWriter}/>
 					<Projects visible={selectedTab === 2} useTypeWriter={useTypeWriter}/>
 					<ContactMe visible={selectedTab === 3} useTypeWriter={useTypeWriter}/>
-				</div>
-              </div>
-              {this.getTabs()}
+					{/* <div style={{...styles.carousel, ...{marginLeft: carouselMarginLeft}}} className={carouselShouldTransition ? '' : 'noTransition'}>
+						<Mugshot visible={selectedTab === 0} useTypeWriter={useTypeWriter}/>
+						<AboutMe visible={selectedTab === 1} useTypeWriter={useTypeWriter}/>
+						<Projects visible={selectedTab === 2} useTypeWriter={useTypeWriter}/>
+						<ContactMe visible={selectedTab === 3} useTypeWriter={useTypeWriter}/>
+					</div> */}
+              	</div>
+              	{this.getTabs()}
             </div>
           </ImageSection>;
 	}
@@ -74,7 +78,6 @@ export default class Main extends Component{
 	}
 
 	stopTyping = () => {
-		console.log('Clicked "stop typing" button')
 		if(this.state.useTypeWriter !== false){
 			this.setState({
 				useTypeWriter: false

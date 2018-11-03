@@ -25,7 +25,7 @@ export default class AboutMe extends Component{
 
     render(){
         return (
-            <ContentSection heading='About Me'>
+            <ContentSection heading='About Me' visible={this.props.visible}>
                 <div style={{color: 'white'}}>{this.state.text}</div>
             </ContentSection>
         )

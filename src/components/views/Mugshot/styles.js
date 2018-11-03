@@ -4,10 +4,10 @@ import { layout } from '../../../constants/Layout';
 export const styles = {
     container: {
         width: 'calc(65vw - 20px)',
-        height: '100%',
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
+        overflow: 'hidden'
     },
     headshotContainer:{
         display: 'flex',

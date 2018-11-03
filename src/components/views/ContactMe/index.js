@@ -23,7 +23,7 @@ export default class ContactMe extends Component{
 
     render(){
         return (
-            <ContentSection heading='Get in Touch'>
+            <ContentSection heading='Get in Touch' visible={this.props.visible}>
                 <div>{this.state.text}</div>
             </ContentSection>
         )

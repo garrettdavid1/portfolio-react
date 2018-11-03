@@ -3,22 +3,18 @@ import { layout } from '../../../../constants/Layout';
 export const styles = {
     container: {
         width: 'calc(65vw - 20px)',
-        // marginRight: 20,
-        // flex: 1,
-        height: '100%',
+        height: 'calc(50vh - 20px)',
         boxSizing: 'border-box',
         padding: '10px',
+        position: 'absolute',
+        top: '-50vh',
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
         justifyContent: 'flex-start',
         overflowX: 'hidden',
-        // borderWidth: 0,
-        // borderTopWidth: 3,
-        // borderBottomWidth: 3,
-        // borderStyle: 'solid',
-        // borderColor: 'whitesmoke',
-        color: 'white'
+        color: 'white',
+        transition: 'top .6s linear'
     },
     heading: {
         width: '100%',

@@ -8,7 +8,7 @@ export default class Mugshot extends Component {
 		const isLargeScreen = window.innerWidth > 450;
 		const isWideScreen = window.innerWidth > window.innerHeight;
 		return (
-			<ContentSection style={styles.container}>
+			<ContentSection style={styles.container} visible={this.props.visible}>
 				<div style={{ ...styles.headshotContainer, ...{ height: isLargeScreen ? "100%" : "60%", width: isLargeScreen ? "60%" : "100%" } }}>
 					<OnVis className={this.getHeadshotClasses()} style={{ ...styles.headshot, ...{ height: isWideScreen ? "20vw" : "20vh", width: isWideScreen ? "20vw" : "20vh" } }} />
 				</div>
