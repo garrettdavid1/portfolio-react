@@ -9,7 +9,7 @@ export default class ContactMe extends Component{
         useTypeWriter: true
     }
     hasBeenSeen = false;
-    text = 'Call me, maybe?';
+    text = 'The easiest way, for now, is to drop me a message on LinkedIn: ';
 
     componentWillReceiveProps(nextProps){
         if(nextProps.useTypeWriter && !this.hasBeenSeen && nextProps.visible){
@@ -23,8 +23,8 @@ export default class ContactMe extends Component{
 
     render(){
         return (
-            <ContentSection heading='Get in Touch' visible={this.props.visible}>
-                <div>{this.state.text}</div>
+            <ContentSection heading='Get in Touch' visible={this.props.visible} style={{alignItems: 'center'}}>
+                <a href='https://www.linkedin.com/in/david-garrett-dev/' className='sectionText' target='_blank' style={{color: 'white'}}>LinkedIn</a>
             </ContentSection>
         )
     }

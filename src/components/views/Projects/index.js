@@ -10,7 +10,7 @@ export default class Projects extends Component{
     }
 
     hasBeenSeen = false;
-    text = 'Clearly, I haven\'t gotten to this section yet...';
+    text = 'Oops! It looks like I haven\'t gotten to this section yet... Seems I should take some time off from working for the man to get it done. ¯\\_(ツ)_/¯';
 
     componentWillReceiveProps(nextProps){
         if(nextProps.useTypeWriter && !this.hasBeenSeen && nextProps.visible){
@@ -25,7 +25,7 @@ export default class Projects extends Component{
     render(){
         return (
             <ContentSection heading='Projects' visible={this.props.visible}>
-                <div>{this.state.text}</div>
+                <div className='sectionText'>{this.state.text}</div>
             </ContentSection>
         )
     }

@@ -12,6 +12,7 @@ export const styles = {
     headshotContainer:{
         display: 'flex',
         alignItems: 'center',
+        justifyContent: 'center'
     },
     headshot: {
         borderWidth: 1,
@@ -20,8 +21,9 @@ export const styles = {
         borderRadius: '50%',
         backgroundColor: 'transparent',
         backgroundImage: `url(${images.headshot})`,
-        backgroundSize: 'contain',
+        backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
+        backgroundPositionX: 'center'
     },
     taglineContainer:{
         display: 'flex',

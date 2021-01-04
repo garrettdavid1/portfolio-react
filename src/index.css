@@ -38,7 +38,7 @@ body {
   animation: slideUp .6s forwards;
 }
 
-.headshot{
+/* .headshot{
   margin-left: -150%;
 }
 
@@ -48,10 +48,14 @@ body {
 
 .headshot.tall.appear{
   animation: rollInFromLeftTall 3s forwards;
-}
+} */
 
 .noTransition{
   transition: none !important;
+}
+
+.sectionText{
+  font-size: 2em;
 }
 
 @-webkit-keyframes slideInFromLeft {

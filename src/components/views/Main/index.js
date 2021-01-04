@@ -19,22 +19,18 @@ export default class Main extends Component{
 	}
 
     render(){
-		const {selectedTab, carouselMarginLeft, carouselShouldTransition, useTypeWriter} = this.state;
+		const {selectedTab, useTypeWriter} = this.state;
         return <ImageSection style={styles.container} src={images.header}>
             <div style={styles.topContainer} />
-			<div style={{...layout.button, ...styles.dismissTypeWriterBtn, ...{}}} onClick={this.stopTyping}>Stahp the typing...</div>
+			{ useTypeWriter && 
+				<div style={{...layout.button, ...styles.dismissTypeWriterBtn, ...{}}} onClick={this.stopTyping}>Stahp the typing...</div>
+			}
             <div style={styles.centerRow}>
               	<div style={styles.centerContainer}>
 					<Mugshot visible={selectedTab === 0} useTypeWriter={useTypeWriter}/>
 					<AboutMe visible={selectedTab === 1} useTypeWriter={useTypeWriter}/>
 					<Projects visible={selectedTab === 2} useTypeWriter={useTypeWriter}/>
 					<ContactMe visible={selectedTab === 3} useTypeWriter={useTypeWriter}/>
-					{/* <div style={{...styles.carousel, ...{marginLeft: carouselMarginLeft}}} className={carouselShouldTransition ? '' : 'noTransition'}>
-						<Mugshot visible={selectedTab === 0} useTypeWriter={useTypeWriter}/>
-						<AboutMe visible={selectedTab === 1} useTypeWriter={useTypeWriter}/>
-						<Projects visible={selectedTab === 2} useTypeWriter={useTypeWriter}/>
-						<ContactMe visible={selectedTab === 3} useTypeWriter={useTypeWriter}/>
-					</div> */}
               	</div>
               	{this.getTabs()}
             </div>

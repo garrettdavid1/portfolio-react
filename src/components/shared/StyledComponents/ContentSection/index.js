@@ -12,13 +12,13 @@ export default class ContentSection extends Component{
                         ...styles.container,
                         ...this.props.style, 
                         ...{
-                            top: this.props.visible ? 'calc(25vh + 10px)' : '-50vh',
-                            zIndex: this.props.visible ? 5 : 1
+                            display: this.props.visible ? 'flex' : 'none'
                         }
                     }
                 }
             >
                 {this.props.heading && <h3 className="contentSectionHeader" style={styles.heading}>{this.props.heading}</h3>}
+                <br />
                 {this.props.children}
             </div>
         )

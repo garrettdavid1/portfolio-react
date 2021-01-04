@@ -6,7 +6,7 @@ class Library  {
         });
     }
 
-    typeWriter = (text, component, textFieldName, speed = 50, i = 0) => {
+    typeWriter = (text, component, textFieldName, speed = 20, i = 0) => {
         if(component.state.useTypeWriter){
             if (i < text.length) {
                 component.setState({

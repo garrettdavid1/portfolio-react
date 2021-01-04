@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ContentSection from '../../shared/StyledComponents/ContentSection';
-import { styles } from './styles';
 import { settings } from '../../../constants/Settings';
 import lib from '../../../lib/Lib';
 
@@ -10,7 +9,7 @@ export default class AboutMe extends Component{
         useTypeWriter: true
     }
 
-    text = 'This is all about me.';
+    text = 'Hey, thanks for stopping by! I\'m David, a self-taught mobile and web developer. I started learning how to create web apps back in 2016, landed my first dev job in 2017, and have been chugging away ever since. I love developing mainly with the MERN stack, from the front end to the back, and also have years of experience with C# & ASP.NET. My philosophy is simple: I can learn and build anything. If I don\'t know how to do it right now, I can look it up and (eventually) master it. I am available for freelance or part-time development work. ';
     hasBeenSeen = false;
 
     componentWillReceiveProps(nextProps){
@@ -26,7 +25,7 @@ export default class AboutMe extends Component{
     render(){
         return (
             <ContentSection heading='About Me' visible={this.props.visible}>
-                <div style={{color: 'white'}}>{this.state.text}</div>
+                <div className='sectionText' style={{color: 'white'}}>{this.state.text}</div>
             </ContentSection>
         )
     }
